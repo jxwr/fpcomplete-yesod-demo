@@ -6,4 +6,4 @@ import Debug.Trace
 
 postJobR :: Handler Html
 postJobR = defaultLayout $ do
-    trace "home again" [whamlet| success |]
+    trace "home" [whamlet| success |]
