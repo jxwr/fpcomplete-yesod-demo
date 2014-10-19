@@ -3,6 +3,8 @@ module Foundation where
 import           Yesod
 import           Yesod.Default.Util
 import           Yesod.Form.Jquery
+import           Database.Persist
+import           Database.Persist.TH
 
 {-
 
@@ -49,8 +51,10 @@ Each route has a corresponding handler module, e.g. Handler.Home.
 Please see those modules for more details.
 
 -}
+
 mkYesodData "App" [parseRoutes|
 /         HomeR     GET
 /markdown MarkdownR PUT
 /fib/#Int FibR      GET
+/job      JobR      POST
 |]
